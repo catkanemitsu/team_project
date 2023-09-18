@@ -54,7 +54,7 @@ body.test1 {
     background-size: cover; /* This will cover the entire viewport */
     background-repeat: no-repeat; /* Prevents the image from repeating in case it's too small for the container */
      background-position: center center; /*Centers the image */
-    } 
+    }
 
 .card {
         background-color: rgba(156, 187, 205, 0.814); /* white with 90% opacity */
@@ -66,7 +66,7 @@ body.test2 {
     background-size: cover; /* This will cover the entire viewport */
     /* background-repeat: no-repeat; Prevents the image from repeating in case it's too small for the container */
      background-position: center center; /*Centers the image */
-    } 
+    }
     /* Increased padding inside the card */
 .card1 {
     padding: 10px 12px;
@@ -80,5 +80,3 @@ h1.login-heading {
     margin-right: 60px;
     display: flex;
 }
-
-
