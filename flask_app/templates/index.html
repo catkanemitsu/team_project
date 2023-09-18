@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Register Now</h1>
+    <a href="/login">Already Have an account? </a>
+
+    {%with messages = get_flashed_messages()%}
+        {%if messages%}
+        <div id="popup">
+            {%for message in messages%}
+            <p>{{message}}</p>
+            {%endfor%}
+            <button onclick="popup.remove()">Okay</button>
+        </div>
+        {%endif%}
+    {%endwith%}
+    <div class="registerform">
+    <form action='/create' method="post">
+        <div class="row">
+            <div class="col">
+                <label>
+                    First Name:
+                <input type="text" class="form-control" placeholder="First name" aria-label="First name" name="first_name">
+            </label>
+            </div>
+            <div class="col">
+                <label>
+                    Last Name:
+                <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" name="last_name">
+                </label>
+            </div>
+            <div class="col">
+                <label>
+                    Email:
+                <input type="email" class="form-control" placeholder="Email" aria-label="email" name="email">
+                </label>
+            </div>
+            <div class="col">
+                <label>
+                    Password:
+                <input type="password" class="form-control" placeholder="Password" aria-label="password" name="password">
+                </label>
+            </div>
+            <div class="col">
+                <label>
+                    Confirm Password:
+                <input type="password" class="form-control" placeholder="Confirm Password" aria-label="confirm_password" name="confirm_password">
+                </label>
+            </div>
+
+        </div>
+        <button type="submit" class="btn btn-success" style="margin-top: 10px;">Register!</button>
+    </form>
+    </div>
+
+
+
+</body>
+</html>
+
+<!-- Format for adding images -->
+<!-- <img src="{{ url_for('static', filename='images/img.png') }}"> -->

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Login</h1>
+    <a href="/">Create Account!</a>
+    {%with messages = get_flashed_messages()%}
+        {%if messages%}
+        <div id="popup">
+            {%for message in messages%}
+            <p>{{message}}</p>
+            {%endfor%}
+            <button onclick="popup.remove()">Okay</button>
+        </div>
+        {%endif%}
+    {%endwith%}
+    <form action="/users/login" method="post">
+        <div class="col">
+            <label>
+                Email:
+            <input type="text" class="form-control" placeholder="Email" aria-label="email" name="email">
+            </label>
+        </div>
+        <div class="col">
+            <label>
+                Password:
+            <input type="password" class="form-control" placeholder="Password" aria-label="password" name="password">
+            </label>
+        </div>
+        <button type="submit" class="btn btn-success" style="margin-top: 10px;">Login!</button>
+    </form>
+    </div>
+
+</body>
+</html>
