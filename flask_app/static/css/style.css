@@ -1,0 +1,86 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7fa;
+    color: #333;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #83b3e9;
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #e3ebef;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.card1 {
+    box-shadow: 0 4px 8px rgba(50, 173, 214, 0.73);
+}
+
+.btn-primary {
+    background-color: #067597;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #2980B9;
+}
+
+.alert-warning {
+    background-color: #FCF8E3;
+    border-color: #FAEBCC;
+    color: #8A6D3B;
+}
+
+body.test1 {
+    background-image: url("./images/trade8.jpg");
+    background-size: cover; /* This will cover the entire viewport */
+    background-repeat: no-repeat; /* Prevents the image from repeating in case it's too small for the container */
+     background-position: center center; /*Centers the image */
+    } 
+
+.card {
+        background-color: rgba(156, 187, 205, 0.814); /* white with 90% opacity */
+        box-shadow: 0 4px 8px rgba(102, 180, 233, 0.638);
+        border: rgba(54, 193, 239, 0.1);
+}
+body.test2 {
+    background-image: url("./images/trade8.jpg");
+    background-size: cover; /* This will cover the entire viewport */
+    /* background-repeat: no-repeat; Prevents the image from repeating in case it's too small for the container */
+     background-position: center center; /*Centers the image */
+    } 
+    /* Increased padding inside the card */
+.card1 {
+    padding: 10px 12px;
+    border: rgba(64, 210, 232, 0.73);
+    border-color: rgba(76, 215, 239, 0.638);
+    background-color: rgba(156, 187, 205, 0.814); /* white with 90% opacity */
+    margin-top: 20%;
+}
+h1.login-heading {
+    margin-top: 45px;
+    margin-right: 60px;
+    display: flex;
+}
+.text-center{
+    display: flex;
+}
+

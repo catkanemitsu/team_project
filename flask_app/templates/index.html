@@ -4,68 +4,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+
     <script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}" defer></script>
-    <title>Document</title>
+    <title>Registration</title>
 </head>
-<body>
+<body class="test1">
 
-    <h1>Register Now</h1>
-    <a href="/login">Already Have an account? </a>
+    <div class="container mt-5 test1">
+        <div class="row justify-content-center">
 
-    {%with messages = get_flashed_messages()%}
-        {%if messages%}
-        <div id="popup">
-            {%for message in messages%}
-            <p>{{message}}</p>
-            {%endfor%}
-            <button onclick="popup.remove()">Okay</button>
+            <div class="col-md-6 op">
+                <h1 class="text-center mb-4">Register Now</h1>
+                <p class="text-center"><a href="/login">Already Have an account?</a></p>
+
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                    <div class="alert alert-warning alert-dismissible fade show">
+                        {% for message in messages %}
+                        <p>{{ message }}</p>
+                        {% endfor %}
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    </div>
+                    {% endif %}
+                {% endwith %}
+
+                <div class="card">
+                    <div class="card-body">
+                        <form action='/create' method="post">
+                            <div class="form-group">
+                                <label for="first_name">First Name:</label>
+                                <input type="text" class="form-control" placeholder="First name" id="first_name" name="first_name">
+                            </div>
+                            <div class="form-group">
+                                <label for="last_name">Last Name:</label>
+                                <input type="text" class="form-control" placeholder="Last name" id="last_name" name="last_name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" class="form-control" placeholder="Email" id="email" name="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password:</label>
+                                <input type="password" class="form-control" placeholder="Password" id="password" name="password">
+                            </div>
+                            <div class="form-group">
+                                <label for="confirm_password">Confirm Password:</label>
+                                <input type="password" class="form-control" placeholder="Confirm Password" id="confirm_password" name="confirm_password">
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Register!</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-        {%endif%}
-    {%endwith%}
-    <div class="registerform">
-    <form action='/create' method="post">
-        <div class="row">
-            <div class="col">
-                <label>
-                    First Name:
-                <input type="text" class="form-control" placeholder="First name" aria-label="First name" name="first_name">
-            </label>
-            </div>
-            <div class="col">
-                <label>
-                    Last Name:
-                <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" name="last_name">
-                </label>
-            </div>
-            <div class="col">
-                <label>
-                    Email:
-                <input type="email" class="form-control" placeholder="Email" aria-label="email" name="email">
-                </label>
-            </div>
-            <div class="col">
-                <label>
-                    Password:
-                <input type="password" class="form-control" placeholder="Password" aria-label="password" name="password">
-                </label>
-            </div>
-            <div class="col">
-                <label>
-                    Confirm Password:
-                <input type="password" class="form-control" placeholder="Confirm Password" aria-label="confirm_password" name="confirm_password">
-                </label>
-            </div>
-
-        </div>
-        <button type="submit" class="btn btn-success" style="margin-top: 10px;">Register!</button>
-    </form>
     </div>
 
-
-
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
 
-<!-- Format for adding images -->
-<!-- <img src="{{ url_for('static', filename='images/img.png') }}"> -->
