@@ -34,7 +34,7 @@ def index():
     if 'user_id' not in session :
         return redirect('/login')
     else:
-        print(session['first_name']
+        print(session['first_name'])
         return render_template('home.html')
 
 #LOGOUT
