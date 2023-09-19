@@ -50,7 +50,7 @@ a:hover {
 }
 
 body.test1 {
-    background-image: url("./images/trade8.jpg");
+    background-image: url("../images/trade8.jpg");
     background-size: cover; /* This will cover the entire viewport */
     background-repeat: no-repeat; /* Prevents the image from repeating in case it's too small for the container */
      background-position: center center; /*Centers the image */
@@ -62,7 +62,7 @@ body.test1 {
         border: rgba(54, 193, 239, 0.1);
 }
 body.test2 {
-    background-image: url("./images/trade8.jpg");
+    background-image: url("../images/trade8.jpg");
     background-size: cover; /* This will cover the entire viewport */
     /* background-repeat: no-repeat; Prevents the image from repeating in case it's too small for the container */
      background-position: center center; /*Centers the image */
