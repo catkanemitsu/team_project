@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Journal Entry</title>
+</head>
+<body>
+    <nav>
+        <h2>Hello, {{session['first_name']}}</h2>
+        <a href="/home">Dashboard</a>
+        <a href="/users/logout">Logout</a>
+    </nav>
+    <!---<form action="/PUT THE ACTION NAME HERE FOR THE EDIT  POST METHOD" method="POST">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p>{{ message }}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}   
+        <input type="hidden" name="id" value="put jinja with the id for the trade">-->
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" value="put jinja for the name of asset here" name="name">
+        </div>
+        <div>
+            <label for="find name in db that was used">Trade Date & Time:</label>
+            <input type="text" value="put jinja for the date and time here of asset here" name="and put it here too">
+        </div>
+        <div>
+            <label for="asset">Asset:</label>
+            <input type="text" value=" jinja for asset" name="asset">
+        </div>
+        <div>
+            <label for="position">Position:</label>
+            <input type="text" value="jinja for position" name="position">
+        </div>
+        <div>
+            <label for="loss">Loss:</label>
+            <input type="text" value="put jinja for loss" name="loss">
+        </div>
+        <button type="submit">Update Journal Entry</button>
+    <!--</form>-->
+</body>
+</html>
